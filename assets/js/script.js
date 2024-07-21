@@ -108,7 +108,7 @@ todoList.addEventListener("click", function(event) {
     //  The purpose of the following line of code is to remove the todo from the todos array.
     console.log(index);
    
-    alert(todos[index] + " is removed from the list");
+    alert(todos[index] + " was removed from the list");
     todos.splice(index, 1);
 
     // The storeTodos function will be called to store the todos array in the local storage.
