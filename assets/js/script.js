@@ -94,12 +94,18 @@ todoForm.addEventListener("submit", function(event) {
 // TODO: Describe the purpose of the following line of code.
 // The purpose of the following line of code is to add an event listener to the todoList element.
 todoList.addEventListener("click", function(event) {
-  alert("I was");
+
+
   var element = event.target;
   // TODO: Describe the functionality of the following `if` statement.
   //  The purpose of the following if statement is to check if the element that was clicked is a button.
   if (element.matches("button") === true) {
+    //  The purpose of the following line of code is to get the index of the todo that was clicked.
     var index = element.parentElement.getAttribute("data-index");
+    //  The purpose of the following line of code is to remove the todo from the todos array.
+    console.log(index);
+   
+    alert(todos[index] + " is removed from the list");
     todos.splice(index, 1);
     // TODO: What will happen when the following functions are called?
     // The storeTodos function will be called to store the todos array in the local storage.
