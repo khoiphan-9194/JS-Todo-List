@@ -13,7 +13,7 @@ var todos = [];
 //The li element will be appended to the ul element with the id of todo-list. 
 //The todoCountSpan will be updated with the length of the todos array.
 function renderTodos() {
- 
+  todoList.setAttribute("id","todoForm")
   todoList.innerHTML = "todo-lists from ul element";
   todoCountSpan.textContent = todos.length;
   
@@ -25,6 +25,7 @@ function renderTodos() {
     var li = document.createElement("li");
     li.textContent = todo;
     li.setAttribute("data-index", i);
+    li.setAttribute("id","todo-elements")
 
     var button = document.createElement("button");
     button.textContent = "Complete ✔️";
